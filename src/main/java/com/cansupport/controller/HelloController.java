@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class HelloController {
     @GetMapping("path")
     public String hello() {
-        return "Hello! CAN Support Backend is Working";
+        return "Hello! CAN Support Backend is Working Check";
     }
 
 }
