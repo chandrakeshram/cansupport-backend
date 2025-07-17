@@ -8,6 +8,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_USER: Chandrakesh_Ram
+          POSTGRES_PASSWORD: root12345
+          POSTGRES_DB: cansupport-db
+        ports:
+          - 5432: 5432
+        options:
+          --health-cmd pg_isready
+          --health-interval 10s 
+          --health-timeout 5s 
+          --health-retries 5
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
@@ -20,7 +34,10 @@ jobs:
 
     - name: Build with Maven
       run: mvn clean package
-
+      env:
+        SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/cansuport-db
+        SPRING_DATASOURCE_USERNAME: Chandrakesh_Ram
+        SPRING_DATASOURCE_PASSWORD: root12345
     - name: Log in to Docker Hub
       uses: docker/login-action@v3
       with:
