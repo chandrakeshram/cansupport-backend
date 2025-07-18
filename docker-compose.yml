@@ -8,7 +8,8 @@ services:
     depends_on:
       - db
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/cansupport-db
+      SPRING_PROFILES_ACTIVE: docker
+      SPRING_DATASOURCE_URL: jdbc:postgresql://cansupport-db:5432/cansupport-db
       SPRING_DATASOURCE_USERNAME: Chandrakesh_Ram
       SPRING_DATASOURCE_PASSWORD: root12345
       SPRING_MAIL_HOST: sandbox.smtp.mailtrap.io
