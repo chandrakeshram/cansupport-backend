@@ -9,22 +9,22 @@ services:
       - db
     environment:
       SPRING_PROFILES_ACTIVE: docker
-      SPRING_DATASOURCE_URL: jdbc:postgresql://cansupport-db:5432/cansupport-db
-      SPRING_DATASOURCE_USERNAME: Chandrakesh_Ram
-      SPRING_DATASOURCE_PASSWORD: root12345
+      SPRING_DATASOURCE_URL: jdbc:postgresql://dpg-d1tggiripnbc73ca9fvg-a:5432/cansupport_d
+      SPRING_DATASOURCE_USERNAME: chandrakesh_ram
+      SPRING_DATASOURCE_PASSWORD: WNgKKXz9OAUssS0rqWQp2ZLjTYLBHslQ
       SPRING_MAIL_HOST: sandbox.smtp.mailtrap.io
       SPRING_MAIL_PORT: 2525
       SPRING_MAIL_USERNAME: 4297b546c8aac6
       SPRING_MAIL_PASSWORD: 889d2c2d862f12
 
   db:
-    image: postgres:15
+    image: postgres:16
     container_name: cansupport-db
     restart: always
     environment:
-      POSTGRES_DB: cansupport-db
-      POSTGRES_USER: Chandrakesh_Ram
-      POSTGRES_PASSWORD: root12345
+      POSTGRES_DB: cansupport_db
+      POSTGRES_USER: chandrakesh_ram
+      POSTGRES_PASSWORD: WNgKKXz9OAUssS0rqWQp2ZLjTYLBHslQ
     ports:
       - "5432:5432"
     volumes:
