@@ -12,9 +12,9 @@ jobs:
       postgres:
         image: postgres:15
         env:
-          POSTGRES_USER: Chandrakesh_Ram
-          POSTGRES_PASSWORD: root12345
-          POSTGRES_DB: cansupport-db
+          POSTGRES_USER: chandrakesh_ram
+          POSTGRES_PASSWORD: WNgKKXz9OAUssS0rqWQp2ZLjTYLBHslQ
+          POSTGRES_DB: cansupport_db
         options: >-
           --health-cmd pg_isready
           --health-interval 10s 
